@@ -56,7 +56,6 @@ class KieHttpParserConan(ConanFile):
 
 
     def package_info(self):
-        self.cpp_info.set_property("cmake_target_name", "kie_http_parser::kie_http_parser")
         if self.options.with_http1:
             self.cpp_info.components["http1"].libs = ["http1"]
             self.cpp_info.components["http1"].libdirs = ["lib"]
