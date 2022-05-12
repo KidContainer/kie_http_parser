@@ -5,6 +5,13 @@ set(CMAKE_CXX_STANDARD 20)
 
 option(BUILD_HTTP1 "If http1 component should be built" ON)
 option(BUILD_HTTP2 "If http2 component should be built" ON)
+option(ENABLE_HTTP1_TEST "Enable test code for http1 component" OFF)
+option(ENABLE_HTTP2_TEST "Enable test code for http2 component" OFF)
+
+
+if(ENABLE_HTTP1_TEST OR ENABLE_HTTP2_TEST)
+    include(CTest)
+endif()
 
 if(BUILD_HTTP1)
     add_subdirectory(http1)
