@@ -11,3 +11,6 @@ if(ENABLE_HTTP2_TEST)
     add_link_options(-fsanitize=address --coverage)
     add_subdirectory(test)
 endif()
+
+install(TARGETS http2)
+install(DIRECTORY include/ DESTINATION include/http2)

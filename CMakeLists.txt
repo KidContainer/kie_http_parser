@@ -23,3 +23,4 @@ if(BUILD_HTTP2)
     add_library(kie_http_parser::http2 ALIAS http2)
 endif()
 
+install(FILES LICENSE DESTINATION license)

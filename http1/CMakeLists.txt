@@ -11,3 +11,6 @@ if(ENABLE_HTTP1_TEST)
     add_link_options(-fsanitize=address --coverage)
     add_subdirectory(test)
 endif()
+
+install(TARGETS http1)
+install(DIRECTORY include/ DESTINATION include/http1)
